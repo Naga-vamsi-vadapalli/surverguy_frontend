@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchSearchResults, setQuery } from '../slices/searchSlice';
 import SearchBar from '../components/SearchBar';
 import ResultsList from '../components/ResultsList';
 import Pagination from '../components/Pagination';
-import "./index.css"
+import "./index.css";
 
 const Dashboard = () => {
   const username = localStorage.getItem('username');
+  const dispatch = useDispatch();
+
+  // Load popular posts by default on mount
+  useEffect(() => {
+    const defaultQuery = ''; // Empty query for popular posts
+    dispatch(setQuery(defaultQuery));
+    dispatch(fetchSearchResults({ query: defaultQuery, page: 0 }));
+  }, [dispatch]);
 
   return (
     <div>
@@ -16,14 +26,9 @@ const Dashboard = () => {
       </div>
       </div> 
       <div className='results-container'>
-        <ResultsList/>
-        <div className='pagination'><Pagination/></div>
-
+        <ResultsList />
+        <div className='pagination'><Pagination /></div>
       </div>
-
-      
-      
-      
     </div>
   );
 };
