@@ -1,0 +1,25 @@
+.search-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: #ff702b;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 70px;
+
+
+}
+
+.results-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color:#f6f6ef;
+}
+.pagination{
+    display: flex; 
+    justify-content: center;   
+}

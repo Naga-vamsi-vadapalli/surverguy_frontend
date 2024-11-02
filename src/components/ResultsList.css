@@ -1,0 +1,18 @@
+.result-title{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.text{
+    color: grey;
+}
+.results-list{
+    list-style-type: none; 
+    text-decoration: none;
+
+}
+.original-source{
+    text-decoration: none;
+    color: inherit;
+
+}

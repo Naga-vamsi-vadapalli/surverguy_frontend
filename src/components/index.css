@@ -1,0 +1,30 @@
+.searchbar{
+    
+  width: 500px;
+  font-size: 1em;
+  padding: 10px;
+  margin-right: 10px;
+}
+.search-history {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px; /* Limit the height */
+    overflow-y: auto; /* Add scroll if necessary */
+    background-color: white; /* Background color */
+    position: absolute; /* Position it absolutely */
+    z-index: 1000; /* Make sure it appears on top */
+  }
+  
+  .search-history li {
+    padding: 8px 12px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .search-history li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+  }
+  
